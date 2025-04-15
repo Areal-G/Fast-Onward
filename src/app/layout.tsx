@@ -1,15 +1,62 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../css/globals.css";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const neulisSans = localFont({
+  src: [
+    {
+      path: "../fonts/Neulis_Sans_Thin.otf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Neulis_Sans_Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Neulis_Sans_Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Neulis_Sans_Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Neulis_Sans_Semi_Bold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Neulis_Sans_Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Neulis_Sans_Extra_Bold.otf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  fallback: [
+    "ui-sans-serif",
+    "system-ui",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue",
+    "Arial",
+    "Noto Sans",
+    "sans-serif",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji",
+  ],
 });
 
 export const metadata: Metadata = {
@@ -23,12 +70,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className={neulisSans.className}>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

@@ -15,7 +15,7 @@ const navLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
-export function NavBar() {
+export function Navbar() {
   return (
     <header className="h-[108px] bg-transparent">
       <Container className="items-center md:px-0 relative w-[1240px] flex">

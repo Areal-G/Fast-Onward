@@ -1,4 +1,32 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+:root {
+  /* Neutral Colors */
+  --white: #FFFFFF;
+  --gray-100: #F5F5F6;
+  --gray-200: #E1E2E3;
+  --gray-300: #C2C4C7;
+  --gray-400: #8F9498;
+  --gray-500: #6F6F6F;
+  --gray-600: #2A323A;
+  --gray-700: #131C24;
+  --gray-800: #010B14;
+  
+  /* Primary Colors */
+  --primary-surface: #E2F1FE;
+  --primary-focused: #CFE7FD;
+  --primary-border: #8DC6FA;
+  --primary: #0085FF; 
+  --primary-hover: #0C62B0;
+  --primary-pressed: #0A4C89;
+  
+  /* System Colors */
+  --background: var(--white);
+  --foreground: var(--gray-600);
+  --border: var(--gray-200);
+  --muted: var(--gray-500);
+  --accent: var(--gray-300);
+}
 

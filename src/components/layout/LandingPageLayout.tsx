@@ -3,7 +3,7 @@ import React from "react";
 import { Footer } from "@/components/footer/Footer";
 import { Container } from "@/components/ui/container";
 import { Spacer } from "@/components/ui/spacer";
-import { MainNav } from "../navigation/MainNav";
+import { MainNav } from "@/components/navigation/MainNav";
 
 interface LandingPageLayoutProps {
   children: React.ReactNode;
